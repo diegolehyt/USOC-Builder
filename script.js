@@ -1,3 +1,13 @@
+// APP starts
+// Variables
+let modem = {
+    HomeHub2000: "HNSYM",
+    HomeHub3000: "NGMOD",
+    HomeHub4000: "4KMOD"
+}
+
+// APP ends
+
 // USOC DATA -----------------------------------------------------------------------------
 
 // SINGLE INT

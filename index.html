@@ -29,7 +29,43 @@
             <div class="card col-6">
                 <div class="card-header"><img style="width: 100px; height: 60px;" src="images/Bell.png" alt=""> USOC Builder</div>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <h5 class="card-title">Technology</h5>
+
+                    <!-- Technology pick -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                        <label class="form-check-label" for="flexSwitchCheckChecked">FTTH</label>
+                    </div>
+                    
+                    <!-- Checked disabled WHI -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled />
+                        <label class="form-check-label" for="flexSwitchCheckDisabled">WHI</label>
+                    </div>
+
+                    <!-- MODEM Select -->
+                        
+                        <!-- <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled />
+                        <label class="form-check-label" for="inlineRadio3">HomeHub 1000</label>
+                        </div> -->
+
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                        <label class="form-check-label" for="inlineRadio1">HomeHub 2000</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                        <label class="form-check-label" for="inlineRadio2">HomeHub 3000</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                            <label class="form-check-label" for="inlineRadio1">HomeHub 4000</label>
+                        </div>
+
+
                     <!-- CARD CONTENT -->
                     <div class="accordion" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item">
@@ -44,18 +80,22 @@
                             <strong>This is the first item's accordion body.</strong>
                                 <!-- TVS -->
                                 <ul class="list-group">
-                                    <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                    <!-- <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                         Fibe TV
-                                    </li>
+                                    </li> -->
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                         Fibe TV APP
                                     </li>
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                         Satellite TV
                                     </li>
+                                    <div class="list-group-item">
+                                        <input class="form-check-input" type="radio" value="" id="flexCheckDisabled" disabled />
+                                        <label class="form-check-label" for="flexCheckDisabled">Fibe TV - coming soon</label>
+                                    </div>
                             
                                 </ul>
                                 <!-- TVs END -->
@@ -78,24 +118,36 @@
                             <!-- SPEEDS -->
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                 Fibe 15
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                 Fibe 25
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                 Fibe 50
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                 Fibe 150
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                 Fibe 500
+                                </li>
+                                <li class="list-group-item">
+                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
+                                Fibe GB 1.0
+                                </li>
+                                <li class="list-group-item">
+                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
+                                Fibe GB 1.5
+                                </li>
+                                <li class="list-group-item">
+                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
+                                Fibe GB 3.0
                                 </li>
                             </ul>
                             <!-- SPEEDS END -->
@@ -118,19 +170,19 @@
                                 <!-- SPEEDS -->
                                 <ul class="list-group">
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                         Dry Loop (no Line)
                                     </li>
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                         Access Line
                                     </li>
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                         Home Phone Lite
                                     </li>
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
                                         Home Phone Choice
                                     </li>
                                 </ul>
