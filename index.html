@@ -26,7 +26,7 @@
     <div class="container">
         <br>
         <div class="row">
-            <div class="card col-6">
+            <div class="card col-12 col-lg-6">
                 <div class="card-header"><img style="width: 100px; height: 60px;" src="images/Bell.png" alt=""> USOC Builder</div>
                 <div class="card-body">
                     <h5 class="card-title">Technology</h5>
@@ -44,24 +44,26 @@
                     </div>
 
                     <!-- MODEM Select -->
+
+                        <h5 class="card-title">Modem</h5>
                         
                         <!-- <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled />
+                        <input class="form-check-input" type="radio" name="modem" id="inlineRadio3" value="option3" disabled />
                         <label class="form-check-label" for="inlineRadio3">HomeHub 1000</label>
                         </div> -->
 
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                        <input id="HH2K" class="form-check-input" type="radio" name="modem" id="inlineRadio1" value="option1" />
                         <label class="form-check-label" for="inlineRadio1">HomeHub 2000</label>
                         </div>
 
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                        <input id="HH3K" class="form-check-input" type="radio" name="modem" id="inlineRadio2" value="option2" />
                         <label class="form-check-label" for="inlineRadio2">HomeHub 3000</label>
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                            <input id="HH4K" class="form-check-input" type="radio" name="modem" id="inlineRadio1" value="option1" />
                             <label class="form-check-label" for="inlineRadio1">HomeHub 4000</label>
                         </div>
 
@@ -77,7 +79,7 @@
                         </h2>
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                             <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong>
+                            <strong>TV options</strong>
                                 <!-- TVS -->
                                 <ul class="list-group">
                                     <!-- <li class="list-group-item">
@@ -85,17 +87,24 @@
                                         Fibe TV
                                     </li> -->
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
+
+                                        <input class="form-check-input" type="radio" name="radioTV" id="FibeTVAPP" value="" aria-label="..." />
                                         Fibe TV APP
+      
                                     </li>
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                        Satellite TV
+                                   
+                                        <input class="form-check-input" type="radio" name="radioTV" id="SATTV" value="" aria-label="..." />
+                                        Satellite TV   
+                                       
                                     </li>
-                                    <div class="list-group-item">
-                                        <input class="form-check-input" type="radio" value="" id="flexCheckDisabled" disabled />
-                                        <label class="form-check-label" for="flexCheckDisabled">Fibe TV - coming soon</label>
-                                    </div>
+
+                                    <li class="list-group-item">
+
+                                        <input class="form-check-input" type="radio" name="radioTV" id="FibeTV" value="" aria-label="..." />
+                                        Fibe TV
+      
+                                    </li>
                             
                                 </ul>
                                 <!-- TVs END -->
@@ -114,40 +123,41 @@
                         </h2>
                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
                             <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong>
+                            <strong>Internet speeds options</strong>
                             <!-- SPEEDS -->
                             <ul class="list-group">
+                          
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                Fibe 15
+                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe15FTTH" value="" aria-label="..." />
+                                    Fibe 15
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                Fibe 25
+                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe25FTTH" value="" aria-label="..." />
+                                    Fibe 25
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                Fibe 50
+                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe50FTTH" value="" aria-label="..." />
+                                    Fibe 50
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                Fibe 150
+                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe150FTTH" value="" aria-label="..." />
+                                    Fibe 150
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                Fibe 500
+                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe500FTTH" value="" aria-label="..." />
+                                    Fibe 500
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                Fibe GB 1.0
+                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe1000FTTH" value="" aria-label="..." />
+                                    Gigabit Fibe 1.0
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                Fibe GB 1.5
+                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe1500FTTH" value="" aria-label="..." />
+                                    Gigabit Fibe 1.5
                                 </li>
                                 <li class="list-group-item">
-                                <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                Fibe GB 3.0
+                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe3000FTTH" value="" aria-label="..." />
+                                    Gigabit Fibe 3.0
                                 </li>
                             </ul>
                             <!-- SPEEDS END -->
@@ -166,25 +176,30 @@
                         </h2>
                         <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
                             <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> 
+                            <strong>Home Phone packages options</strong> 
                                 <!-- SPEEDS -->
                                 <ul class="list-group">
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                        Dry Loop (no Line)
+                                   
+                                        <input class="form-check-input" type="radio" name="radioHP" id="dryloop" value="" aria-label="..." checked />
+                                        Dry Loop   
+                                       
                                     </li>
                                     <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                        Access Line
+                                   
+                                        <input class="form-check-input" type="radio" name="radioHP" id="dryloop" value="" aria-label="..." />
+                                        Home Phone Choice   
+                                       
                                     </li>
-                                    <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                        Home Phone Lite
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" value="" aria-label="..." />
-                                        Home Phone Choice
-                                    </li>
+                                    <div class="list-group-item">
+                                        <input class="form-check-input" type="radio" value="" id="flexCheckDisabled" disabled />
+                                        <label class="form-check-label" for="flexCheckDisabled">Home Phone Lite - coming soon</label>
+                                    </div>
+
+                                    <div class="list-group-item">
+                                        <input class="form-check-input" type="radio" value="" id="flexCheckDisabled" disabled />
+                                        <label class="form-check-label" for="flexCheckDisabled">Access Only - coming soon</label>
+                                    </div>
                                 </ul>
                                 <!-- SPEEDS END -->
                             </div>
@@ -192,24 +207,44 @@
                         </div>
                     </div>
                     <br>
-                    <a href="#" class="btn btn-primary">SUBMIT</a>
+                    <a id="submit" href="#topResult" class="btn btn-primary">SUBMIT</a>
                 </div>
                 <div class="card-footer text-muted">BELL and VIRGIN orders using BCRIS</div>
             </div>
             <!-- Space -->
-            <div class="col-1"></div>
+            <div class="col-12 col-lg-1"><br></div>
             <!-- CARD RESULTS -->
 
-            <div class="card col-5">
-                <div class="card-header"> USOC Results</div>
+            <div class="card col-12 col-lg-5" style="height: 50%;">
+                <div id="topResult" class="card-header"> USOC Results</div>
                 <div class="card-body">
-                    <h5 class="card-title">Hit Submit for results</h5>
+                    <h5 id="bundle" class="card-title">Hit Submit for results</h5>
+
+                    <div id="rightBox" style="display: block;">
+                        <ul class="list-group list-group-horizontal">
+
+                            <li id="CS" class="list-group-item">CS:</li>
+                            <li class="list-group-item"></li>
+                            <li id="LST" class="list-group-item">LST:</li>
+                            
+                        </ul>
+                        <br>
+                        <ul id="USOClist" class="list-group list-group-horizontal-xxl">
+
+                                                  
+
+                        </ul>
+                    </div>
+
+                    <div id="resultsBox">
+                      
+                    </div>
                 </div>    
             </div>
         </div>
     </div>
-
-       
+      <!-- My Script -->
+       <script src="script.js"></script>
       <!-- MDB -->
         <script
         type="text/javascript"
