@@ -42,7 +42,7 @@ submitBtn.addEventListener("click", submit);
 function generateList(value) {
         
     let USOCelement = document.createElement("li");
-    USOCelement.className = "list-group-item"
+    USOCelement.className = "list-group-item list-group-item-action list-group-item-info"
 
     USOCelement.innerHTML = value;
 
@@ -63,7 +63,7 @@ function submit() {
     // SCAN TV
     if (FibeTV.checked == true) {
         TVIndicator = true;
-        USOCS.push("WDATA");  
+        // USOCS.push("WDATA");  
     
     }
     else if (FibeTVAPP.checked == true) {
@@ -172,7 +172,7 @@ function submit() {
   }
   else {
     InternetIndicator = false  
-    resultsBox.innerHTML = "NO USOCS NEEDED";
+    resultsBox.innerHTML = "";
   }
 
 
