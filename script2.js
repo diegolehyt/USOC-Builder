@@ -45,7 +45,7 @@ submitBtn.addEventListener("click", submit);
 function generateList(value) {
         
     let USOCelement = document.createElement("li");
-    USOCelement.className = "list-group-item list-group-item-action list-group-item-info"
+    USOCelement.className = "list-group-item list-group-item-action list-group-item-danger"
 
     USOCelement.innerHTML = value;
 
