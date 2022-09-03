@@ -9,28 +9,31 @@ let LST = document.getElementById("LST");
 let USOClist = document.getElementById("USOClist");
 // Indicator services
 let InternetIndicator = false;
-let TVIndicator = false;
-let HPIndicator = false;
+
+
+// technology indicator
+let FTTNindicator = false;
 
 // MODEM
 let HH2K = document.getElementById("HH2K");
 let HH3K = document.getElementById("HH3K");
-let HH4K = document.getElementById("HH4K");
+
 
 // FTTH
 let Fibe15FTTH = document.getElementById("Fibe15FTTH");
 let Fibe25FTTH = document.getElementById("Fibe25FTTH");
 let Fibe50FTTH = document.getElementById("Fibe50FTTH");
 let Fibe150FTTH = document.getElementById("Fibe150FTTH");
-let Fibe500FTTH = document.getElementById("Fibe500FTTH");
-let Fibe1000FTTH = document.getElementById("Fibe1000FTTH");
-let Fibe1500FTTH = document.getElementById("Fibe1500FTTH");
-let Fibe3000FTTH = document.getElementById("Fibe3000FTTH");
+
 
 // TV
-let FibeTV = document.getElementById("FibeTV");
+
 let FibeTVAPP = document.getElementById("FibeTVAPP");
-let SATTV = document.getElementById("SATTV");
+
+// technology
+
+let FTTN = document.getElementById("FTTNindicator");
+
 
 
 // functions
@@ -55,51 +58,47 @@ function submit() {
     USOCS = [];
     USOClist.innerHTML = "";
     InternetIndicator = false;
-    TVIndicator = false;
+    FTTNindicator = false;
     HPIndicator = false;
   }
 
   // S C A N S
+
+    // SCAN Technology
+    if (FTTN.checked == true) {
+      FTTNindicator = true;
+      // USOCS.push("WDATA");  
+  
+    }
+
     // SCAN TV
-    if (FibeTV.checked == true) {
-        TVIndicator = true;
-        // USOCS.push("WDATA");  
-    
+  if (FibeTVAPP.checked == true) {
+        USOCS.push("*** VIRGIN TV - NO USOC NEEDED ***"); 
     }
-    else if (FibeTVAPP.checked == true) {
-        USOCS.push("*** Fibe TV App - NO USOC NEEDED ***"); 
-    }
-    else if (SATTV.checked == true) {
-        USOCS.push("*** Satellite TV - NO USOC NEEDED ***"); 
-    }
+
     else {
     // NO TV
     }
 
   // SCAN MODEM 
   if (HH2K.checked == true) { 
-    if (TVIndicator == false){
-        USOCS.push("HNSYM (modem)");
-    } 
-    else {
-        USOCS.push("*** Fibe TV w/ HH 2000 - NO MODEM USOC NEEDED ***"); 
-    }
+
+    USOCS.push("HNSYM (modem)");
+
   }
   else if (HH3K.checked == true) {
     USOCS.push("NGMOD (modem)"); 
   }
-  else if (HH4K.checked == true) {
-    USOCS.push("4KMOD (modem)"); 
-  }
+
   else { 
-    resultsBox.innerHTML = "NO MODEM USOCS NEEDED";
+    resultsBox.innerHTML = "MISSING MODEM USOC";
   }
 
   // SCAN INTERNET  
   if (Fibe15FTTH.checked == true) {
     InternetIndicator = true;
-    if (TVIndicator == true){
-        USOCS.push("VLU19");
+    if (FTTNindicator == true){
+        USOCS.push("DSLUM");
     } 
     else {
         USOCS.push("DSLUM");
@@ -108,95 +107,49 @@ function submit() {
 
   else if (Fibe25FTTH.checked == true) {
     InternetIndicator = true; 
-    if (TVIndicator == true){
-        USOCS.push("VLU25");
+    if (FTTNindicator == true){
+        USOCS.push("DSLSN");
     } 
     else {
-        USOCS.push("DSLSN"); 
+        USOCS.push("DSLVC"); 
     }  
   }
 
   else if (Fibe50FTTH.checked == true) {
     InternetIndicator = true;
-    if (TVIndicator == true){
+    if (FTTNindicator == true){
         USOCS.push("VLRFA");
     } 
     else {
-        USOCS.push("DSLFA"); 
+        USOCS.push("DSLVD"); 
     }   
   }
   else if (Fibe150FTTH.checked == true) {
     InternetIndicator = true;
-    if (TVIndicator == true){
+    if (FTTNindicator == true){
         USOCS.push("VLRFC");
     } 
     else {
-        USOCS.push("DSLFC"); 
+        USOCS.push("DSLVE"); 
     } 
   }
-  else if (Fibe500FTTH.checked == true) {
-    InternetIndicator = true;
-    if (TVIndicator == true){
-        USOCS.push("VLRFD");
-    } 
-    else {
-        USOCS.push("DSLFD"); 
-    } 
-  }
-  else if (Fibe1000FTTH.checked == true) {
-    InternetIndicator = true;
-    if (TVIndicator == true){
-        USOCS.push("VLRFB");
-    } 
-    else {
-        USOCS.push("DSLFB"); 
-    } 
-  }
-  else if (Fibe1500FTTH.checked == true) {
-    InternetIndicator = true;
-    if (TVIndicator == true){
-        USOCS.push("VLRFF");
-    } 
-    else {
-        USOCS.push("DSLFF"); 
-    } 
-  }
-  else if (Fibe3000FTTH.checked == true) {
-    InternetIndicator = true;
-    if (TVIndicator == true){
-        USOCS.push("VLRFX");
-    } 
-    else {
-        USOCS.push("DSLFX"); 
-    } 
-  }
+  
   else {
     InternetIndicator = false  
     resultsBox.innerHTML = "";
   }
 
-
-
-  // HP SCAN
-
-
-
-
-
-
   // BUNDLE type
   // INT (SINGLE)
-  if (InternetIndicator == true && TVIndicator == false && HPIndicator == false){
+  if (InternetIndicator == true && FTTNindicator == false && HPIndicator == false){
 
     // MESSEGE about bundle
     bundle.innerHTML = "INTERNET ONLY";
 
     if (FibeTVAPP.checked == true) {
-        bundle.innerHTML = "INTERNET / Fibe TV App - DUO";
+        bundle.innerHTML = "INTERNET / VTV - DUO";
     }
-    else if (SATTV.checked == true) {
-        bundle.innerHTML = "INTERNET / Satellite TV - DUO";
-    }
+
 
     // PRINT INFORMATION and send to USOC array
 
@@ -207,6 +160,34 @@ function submit() {
     USOCS.push("FTTHR (Fibre to the Home)");
     USOCS.push("1RDDL (Main dry loop)");
     USOCS.push("RDSLC (DSL access w/o HP)");  
+    USOCS.push("V1RGN (Virgin)"); 
+     
+    
+    // Generate List
+    USOCS.forEach(generateList);
+
+  }
+
+  // INT SINGLE FTTN
+  if (InternetIndicator == true && FTTNindicator == true && HPIndicator == false){
+
+    // MESSEGE about bundle
+    bundle.innerHTML = "INTERNET ONLY";
+
+    if (FibeTVAPP.checked == true) {
+        bundle.innerHTML = "INTERNET / VTV - DUO";
+    }
+
+
+    // PRINT INFORMATION and send to USOC array
+
+    LST.innerHTML = "LST: DERXX"
+    CS.innerHTML = "CS: DRYXX"
+
+    // pushing USOCs
+    USOCS.push("1RDDL (Main dry loop)");
+    USOCS.push("RDSLC (DSL access w/o HP)"); 
+    USOCS.push("V1RGN (Virgin)");  
      
     
     // Generate List
@@ -214,24 +195,7 @@ function submit() {
 
   }
   
-  // INT + TV (DUO)
-  if (InternetIndicator == true && TVIndicator == true && HPIndicator == false){
 
-    bundle.innerHTML = "INTERNET / Fibe TV - DUO";
-
-    CS.innerHTML = "CS: VLRXX"
-    LST.innerHTML = "LST: DERXX"
-
-    // pushing USOCs
-    USOCS.push("FTTHR (Fibre to the Home)");
-    USOCS.push("1RDDL (Main dry loop)");
-    USOCS.push("WDATA (DSL with Fibe TV)");  
-     
-    
-    // Generate List
-    USOCS.forEach(generateList);
-
-  }
 }
 
 // APP ends

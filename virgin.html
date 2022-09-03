@@ -19,7 +19,20 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css"
     rel="stylesheet"
     />
-
+    
+    <!-- STYLES -->
+    <style>
+        .form-check-input[type=radio]:checked:after{
+            background-color: red;
+          
+        }
+        .form-check-input:checked{
+            border-color: red;
+        }
+        .form-check-input:checked:focus {
+            border-color: red;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -29,17 +42,15 @@
         <div class="row">
             <div class="card col-12 col-lg-6">
                 <div class="row">
-                    <div class="card-header col-9"><img style="width: 100px; height: 60px;" src="images/Bell.png" alt=""> USOC Builder</div>
-             
+                    <div class="card-header col-9"><img style="width: 150px; height: 60px;" src="images/virgin2.png" alt=""> USOC Builder</div>
+    
 
-                    <!-- switch to VIRGIN button -->
+                    <!-- switch to BELL button -->
                     <div class="card-header col-3">
-                        <button type="button" class="btn btn-danger btn-rounded"><a href="virgin.html" style="color: white;">VIRGIN</a></button>
+                        <button type="button" class="btn btn-primary btn-rounded"><a href="index.html" style="color: white;">BELL</a></button>
 
                     </div>
                 </div>
-                
-                
                 
 
                 <div class="card-body">
@@ -50,25 +61,11 @@
                         </div>
 
                         <div class="form-check form-check-inline">
-                        <input id="FTTNN" class="form-check-input" type="radio" name="tec" id="inlineRadio2" value="option2" />
+                        <input id="FTTNindicator" class="form-check-input" type="radio" name="tec" id="inlineRadio2" value="option2" />
                         <label class="form-check-label" for="inlineRadio2">FTTN</label>
                         </div>
 
-                        <div class="form-check form-check-inline">
-                            <input id="WHII" class="form-check-input" type="radio" name="tec" id="inlineRadio1" value="option1" />
-                            <label class="form-check-label" for="inlineRadio1">WHI</label>
-                        </div>
-                    <!-- Technology pick -->
-                    <!-- <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" disabled />
-                        <label class="form-check-label" for="flexSwitchCheckChecked">FTTH</label>
-                    </div> -->
-                    
-                    <!-- Checked disabled WHI -->
-                    <!-- <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled />
-                        <label class="form-check-label" for="flexSwitchCheckDisabled">WHI</label>
-                    </div> -->
+        
 
                     <!-- MODEM Select -->
 
@@ -81,18 +78,14 @@
 
                         <div class="form-check form-check-inline">
                         <input id="HH2K" class="form-check-input" type="radio" name="modem" id="inlineRadio1" value="option1" />
-                        <label class="form-check-label" for="inlineRadio1">HomeHub 2000</label>
+                        <label class="form-check-label" for="inlineRadio1">Steve</label>
                         </div>
 
                         <div class="form-check form-check-inline">
                         <input id="HH3K" class="form-check-input" type="radio" name="modem" id="inlineRadio2" value="option2" />
-                        <label class="form-check-label" for="inlineRadio2">HomeHub 3000</label>
+                        <label class="form-check-label" for="inlineRadio2">Valerie</label>
                         </div>
 
-                        <div class="form-check form-check-inline">
-                            <input id="HH4K" class="form-check-input" type="radio" name="modem" id="inlineRadio1" value="option1" />
-                            <label class="form-check-label" for="inlineRadio1">HomeHub 4000</label>
-                        </div>
 
 
                     <!-- CARD CONTENT -->
@@ -106,7 +99,7 @@
                         </h2>
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                             <div class="accordion-body">
-                            <strong>TV options</strong>
+                            <strong>VTV</strong>
                                 <!-- TVS -->
                                 <ul class="list-group">
                                     <!-- <li class="list-group-item">
@@ -116,22 +109,10 @@
                                     <li class="list-group-item">
 
                                         <input class="form-check-input" type="radio" name="radioTV" id="FibeTVAPP" value="" aria-label="..." />
-                                        Fibe TV APP
+                                        Virgin TV
       
                                     </li>
-                                    <li class="list-group-item">
-                                   
-                                        <input class="form-check-input" type="radio" name="radioTV" id="SATTV" value="" aria-label="..." />
-                                        Satellite TV   
-                                       
-                                    </li>
-
-                                    <li class="list-group-item">
-
-                                        <input class="form-check-input" type="radio" name="radioTV" id="FibeTV" value="" aria-label="..." />
-                                        Fibe TV
-      
-                                    </li>
+                 
                             
                                 </ul>
                                 <!-- TVs END -->
@@ -168,73 +149,19 @@
                                 </li>
                                 <li class="list-group-item">
                                     <input class="form-check-input" type="radio" name="FTTH" id="Fibe150FTTH" value="" aria-label="..." />
-                                    Fibe 150
+                                    Fibe 100
                                 </li>
-                                <li class="list-group-item">
-                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe500FTTH" value="" aria-label="..." />
-                                    Fibe 500
-                                </li>
-                                <li class="list-group-item">
-                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe1000FTTH" value="" aria-label="..." />
-                                    Gigabit Fibe 1.0
-                                </li>
-                                <li class="list-group-item">
-                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe1500FTTH" value="" aria-label="..." />
-                                    Gigabit Fibe 1.5
-                                </li>
-                                <li class="list-group-item">
-                                    <input class="form-check-input" type="radio" name="FTTH" id="Fibe3000FTTH" value="" aria-label="..." />
-                                    Gigabit Fibe 3.0
-                                </li>
+                            
                             </ul>
                             <!-- SPEEDS END -->
                             
                             </div>
                         </div>
                         </div>
-                        <!-- Home Phone -->
-                        <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
-                            data-mdb-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree">
-                            Home Phone
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
-                            <div class="accordion-body">
-                            <strong>Home Phone packages options</strong> 
-                                <!-- SPEEDS -->
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                   
-                                        <input class="form-check-input" type="radio" name="radioHP" id="dryloop" value="" aria-label="..." checked />
-                                        Dry Loop   
-                                       
-                                    </li>
-                                    <li class="list-group-item">
-                                   
-                                        <input class="form-check-input" type="radio" name="radioHP" id="dryloop" value="" aria-label="..." />
-                                        Home Phone Choice   
-                                       
-                                    </li>
-                                    <div class="list-group-item">
-                                        <input class="form-check-input" type="radio" value="" id="flexCheckDisabled" disabled />
-                                        <label class="form-check-label" for="flexCheckDisabled">Home Phone Lite - coming soon</label>
-                                    </div>
-
-                                    <div class="list-group-item">
-                                        <input class="form-check-input" type="radio" value="" id="flexCheckDisabled" disabled />
-                                        <label class="form-check-label" for="flexCheckDisabled">Access Only - coming soon</label>
-                                    </div>
-                                </ul>
-                                <!-- SPEEDS END -->
-                            </div>
-                        </div>
-                        </div>
+                  
                     </div>
                     <br>
-                    <a id="submit" href="#topResult" class="btn btn-primary">SUBMIT</a>
+                    <a id="submit" href="#topResult" class="btn btn-danger">SUBMIT</a>
                 </div>
                 <div class="card-footer text-muted">BELL and VIRGIN orders using BCRIS</div>
             </div>
@@ -270,8 +197,7 @@
             </div>
         </div>
     </div>
-      <!-- My Script -->
-       <script src="script.js"></script>
+
       <!-- My Script -->
        <script src="script2.js"></script>
       <!-- MDB -->
