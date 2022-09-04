@@ -118,7 +118,7 @@ function submit() {
   else if (Fibe50FTTH.checked == true) {
     InternetIndicator = true;
     if (FTTNindicator == true){
-        USOCS.push("VLRFA");
+        USOCS.push("DSLFA");
     } 
     else {
         USOCS.push("DSLVD"); 
@@ -127,7 +127,8 @@ function submit() {
   else if (Fibe150FTTH.checked == true) {
     InternetIndicator = true;
     if (FTTNindicator == true){
-        USOCS.push("VLRFC");
+        USOCS.push("DSLFC");
+        USOCS.push("PBOND");
     } 
     else {
         USOCS.push("DSLVE"); 
