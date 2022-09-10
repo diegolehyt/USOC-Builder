@@ -20,6 +20,9 @@ let HH3K = document.getElementById("HH3K");
 
 
 // FTTH
+let FibeFTTH = document.getElementById("FibeFTTH");
+let Fibe5FTTH = document.getElementById("Fibe5FTTH");
+let Fibe10FTTH = document.getElementById("Fibe10FTTH");
 let Fibe15FTTH = document.getElementById("Fibe15FTTH");
 let Fibe25FTTH = document.getElementById("Fibe25FTTH");
 let Fibe50FTTH = document.getElementById("Fibe50FTTH");
@@ -95,7 +98,37 @@ function submit() {
   }
 
   // SCAN INTERNET  
-  if (Fibe15FTTH.checked == true) {
+  if (FibeFTTH.checked == true) {
+    InternetIndicator = true;
+    if (FTTNindicator == true){
+        USOCS.push("DSLSJ");
+    } 
+    else {
+        USOCS.push("DSLUM");
+    }    
+  }
+
+  else if (Fibe5FTTH.checked == true) {
+    InternetIndicator = true;
+    if (FTTNindicator == true){
+        USOCS.push("DSLSP");
+    } 
+    else {
+        USOCS.push("DSLSH");
+    }    
+  }
+
+  else if (Fibe10FTTH.checked == true) {
+    InternetIndicator = true;
+    if (FTTNindicator == true){
+        USOCS.push("DSLSP");
+    } 
+    else {
+        USOCS.push("DSLVJ");
+    }    
+  }
+
+  else if (Fibe15FTTH.checked == true) {
     InternetIndicator = true;
     if (FTTNindicator == true){
         USOCS.push("DSLUM");
@@ -204,98 +237,98 @@ function submit() {
 // USOC DATA -----------------------------------------------------------------------------
 
 // SINGLE INT
-let Int = {
+// let Int = {
     
-    CS: "DRYXX",
-    LST: "DERXX",
-    mandatoryU: "1RDDL (Main dry loop) ",
-    mandatoryU2: "1RDDL (DSL access w/o HP) ",
+//     CS: "DRYXX",
+//     LST: "DERXX",
+//     mandatoryU: "1RDDL (Main dry loop) ",
+//     mandatoryU2: "1RDDL (DSL access w/o HP) ",
 
-    // ATM
-    essentialPLus: ["DSLSK", "DSLSU", "DSLSG", "DSLFT", "DSLBS", "DSLSW"],
-    bellInternet: ["DSLSJ" , "DSLO3", "DSLO4", "blank", "DSLSK"],
+//     // ATM
+//     essentialPLus: ["DSLSK", "DSLSU", "DSLSG", "DSLFT", "DSLBS", "DSLSW"],
+//     bellInternet: ["DSLSJ" , "DSLO3", "DSLO4", "blank", "DSLSK"],
 
-    // FTTN
-    FibeInternet: ["DSLSP", "DSLSH"],
-    Fibe15: "DSLUM",
-    Fibe25: "DSLSN",
-    Fibe50: "DSLFA",
-    Fibe100: "DSLFC",
+//     // FTTN
+//     FibeInternet: ["DSLSP", "DSLSH"],
+//     Fibe15: "DSLUM",
+//     Fibe25: "DSLSN",
+//     Fibe50: "DSLFA",
+//     Fibe100: "DSLFC",
 
-    // FTTH
-    Fibe150: "DSLFC",
-    Fibe500: "DSLFD",
-    Fibe1GB: "DSLFB",
-    Fibe15GB: "DSLFF" 
+//     // FTTH
+//     Fibe150: "DSLFC",
+//     Fibe500: "DSLFD",
+//     Fibe1GB: "DSLFB",
+//     Fibe15GB: "DSLFF" 
 
-}
+// }
 
-// INT + TV
-let IntTV = {
+// // INT + TV
+// let IntTV = {
     
-    CS: "VLRXX",
-    LST: "DERXX",
-    mandatoryU: "1RDDL (Main dry loop) ",
-    mandatoryU2: "WDATA (TV access) ",
+//     CS: "VLRXX",
+//     LST: "DERXX",
+//     mandatoryU: "1RDDL (Main dry loop) ",
+//     mandatoryU2: "WDATA (TV access) ",
 
-    // ATM
-    essentialPLus: "VLU65, VLU45, VLR35, VLR25",
-    Fibe25: "DSLSN",
-    Fibe50: "DSLFA",
-    Fibe100: "DSLFC",
+//     // ATM
+//     essentialPLus: "VLU65, VLU45, VLR35, VLR25",
+//     Fibe25: "DSLSN",
+//     Fibe50: "DSLFA",
+//     Fibe100: "DSLFC",
 
-    // FTTH
-    Fibe150: "DSLFC",
-    Fibe500: "DSLFD",
-    Fibe1GB: "DSLFB",
-    Fibe15GB: "DSLFF"
+//     // FTTH
+//     Fibe150: "DSLFC",
+//     Fibe500: "DSLFD",
+//     Fibe1GB: "DSLFB",
+//     Fibe15GB: "DSLFF"
 
-}
+// }
 
-// INT + HP
-let IntHP = {
-    // ATM
-    CS: "DRYXX",
-    LST: "DERXX",
-    mandatoryU: "1RDDL (Main dry loop) ",
-    mandatoryU2: "1RDDL (DSL access w/o HP) ",
-    essentialPLus: "DSLSK      , DSLSU, SG, FT, BS, SW",
-    bellInternet: "DSLSJ     , DSLO3, DSLO4, blank, DSLSK",
-    // FTTN
-    FibeInternet: "DSLSP, DSLSH",
-    Fibe15: "DSLUM",
-    Fibe25: "DSLSN",
-    Fibe50: "DSLFA",
-    Fibe100: "DSLFC",
+// // INT + HP
+// let IntHP = {
+//     // ATM
+//     CS: "DRYXX",
+//     LST: "DERXX",
+//     mandatoryU: "1RDDL (Main dry loop) ",
+//     mandatoryU2: "1RDDL (DSL access w/o HP) ",
+//     essentialPLus: "DSLSK      , DSLSU, SG, FT, BS, SW",
+//     bellInternet: "DSLSJ     , DSLO3, DSLO4, blank, DSLSK",
+//     // FTTN
+//     FibeInternet: "DSLSP, DSLSH",
+//     Fibe15: "DSLUM",
+//     Fibe25: "DSLSN",
+//     Fibe50: "DSLFA",
+//     Fibe100: "DSLFC",
 
-    // FTTH
-    Fibe150: "DSLFC",
-    Fibe500: "DSLFD",
-    Fibe1GB: "DSLFB",
-    Fibe15GB: "DSLFF" 
+//     // FTTH
+//     Fibe150: "DSLFC",
+//     Fibe500: "DSLFD",
+//     Fibe1GB: "DSLFB",
+//     Fibe15GB: "DSLFF" 
 
-}
+// }
 
-// INT + TV + HP
-let IntTVHP = {
-    // ATM
-    CS: "DRYXX",
-    LST: "DERXX",
-    mandatoryU: "1RDDL (Main dry loop) ",
-    mandatoryU2: "1RDDL (DSL access w/o HP) ",
-    essentialPLus: "DSLSK      , DSLSU, SG, FT, BS, SW",
-    bellInternet: "DSLSJ     , DSLO3, DSLO4, blank, DSLSK",
-    // FTTN
-    FibeInternet: "DSLSP, DSLSH",
-    Fibe15: "DSLUM",
-    Fibe25: "DSLSN",
-    Fibe50: "DSLFA",
-    Fibe100: "DSLFC",
+// // INT + TV + HP
+// let IntTVHP = {
+//     // ATM
+//     CS: "DRYXX",
+//     LST: "DERXX",
+//     mandatoryU: "1RDDL (Main dry loop) ",
+//     mandatoryU2: "1RDDL (DSL access w/o HP) ",
+//     essentialPLus: "DSLSK      , DSLSU, SG, FT, BS, SW",
+//     bellInternet: "DSLSJ     , DSLO3, DSLO4, blank, DSLSK",
+//     // FTTN
+//     FibeInternet: "DSLSP, DSLSH",
+//     Fibe15: "DSLUM",
+//     Fibe25: "DSLSN",
+//     Fibe50: "DSLFA",
+//     Fibe100: "DSLFC",
 
-    // FTTH
-    Fibe150: "DSLFC",
-    Fibe500: "DSLFD",
-    Fibe1GB: "DSLFB",
-    Fibe15GB: "DSLFF" 
+//     // FTTH
+//     Fibe150: "DSLFC",
+//     Fibe500: "DSLFD",
+//     Fibe1GB: "DSLFB",
+//     Fibe15GB: "DSLFF" 
 
-}
+// }
