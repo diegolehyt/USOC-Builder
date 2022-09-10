@@ -7,6 +7,7 @@ let USOCS = [];
 let CS = document.getElementById("CS");
 let LST = document.getElementById("LST");
 let USOClist = document.getElementById("USOClist");
+
 // Indicator services
 let InternetIndicator = false;
 let TVIndicator = false;
@@ -16,6 +17,7 @@ let HPIndicator = false;
 let HH2K = document.getElementById("HH2K");
 let HH3K = document.getElementById("HH3K");
 let HH4K = document.getElementById("HH4K");
+let HH6K = document.getElementById("HH6K");
 
 // FTTH
 let Fibe15FTTH = document.getElementById("Fibe15FTTH");
@@ -32,8 +34,36 @@ let FibeTV = document.getElementById("FibeTV");
 let FibeTVAPP = document.getElementById("FibeTVAPP");
 let SATTV = document.getElementById("SATTV");
 
+// HP pkg Display
+let dryloop = document.getElementById("dryloop");
+let HPC = document.getElementById("HPC");
+
+let provinceBox = document.getElementById("provinceBox");
+
+dryloop.addEventListener("click", NOHP);
+HPC.addEventListener("click", WHP);
+
+function NOHP(){
+  provinceBox.setAttribute("class", "nodisplay");
+}
+
+function WHP(){
+  provinceBox.setAttribute("class", "display");
+}
+
+
+
+
 
 // functions
+
+// Generate USOC List Function
+function HPpkg() {
+        
+  let USOCelement = document.createElement("li");
+  USOCelement.className = "list-group-item list-group-item-action list-group-item-info"
+
+}
 
 // SUBMIT Btn Function
 submitBtn.addEventListener("click", submit);
@@ -90,6 +120,9 @@ function submit() {
   }
   else if (HH4K.checked == true) {
     USOCS.push("4KMOD (modem)"); 
+  }
+  else if (HH6K.checked == true) {
+    USOCS.push("6EMOD (modem)"); 
   }
   else { 
     resultsBox.innerHTML = "NO MODEM USOCS NEEDED";

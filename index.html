@@ -20,6 +20,8 @@
     rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -80,18 +82,24 @@
                         </div> -->
 
                         <div class="form-check form-check-inline">
-                        <input id="HH2K" class="form-check-input" type="radio" name="modem" id="inlineRadio1" value="option1" />
-                        <label class="form-check-label" for="inlineRadio1">HomeHub 2000</label>
+                            <input id="HH2K" class="form-check-input" type="radio" name="modem"  value="option1" />
+                            <label class="form-check-label" for="inlineRadio1">HomeHub 2000</label>
                         </div>
 
                         <div class="form-check form-check-inline">
-                        <input id="HH3K" class="form-check-input" type="radio" name="modem" id="inlineRadio2" value="option2" />
-                        <label class="form-check-label" for="inlineRadio2">HomeHub 3000</label>
+                            <input id="HH3K" class="form-check-input" type="radio" name="modem"  value="option2" />
+                            <label class="form-check-label" for="inlineRadio2">HomeHub 3000</label>
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input id="HH4K" class="form-check-input" type="radio" name="modem" id="inlineRadio1" value="option1" />
+                            <input id="HH4K" class="form-check-input" type="radio" name="modem"  value="option3" />
                             <label class="form-check-label" for="inlineRadio1">HomeHub 4000</label>
+                        </div>
+
+                        
+                        <div class="form-check form-check-inline">
+                            <input id="HH6K" class="form-check-input" type="radio" name="modem"  value="option4" />
+                            <label class="form-check-label" for="inlineRadio1">Giga Hub</label>
                         </div>
 
 
@@ -99,12 +107,14 @@
                     <div class="accordion" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-mdb-toggle="collapse"
+                            <!-- remove collapsed class to keep it on -->
+                            <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
                             data-mdb-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                             TV
                             </button>
                         </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                        <!-- you can add "show" class to have it OPEN -->
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
                             <div class="accordion-body">
                             <strong>TV options</strong>
                                 <!-- TVS -->
@@ -203,7 +213,8 @@
                         </h2>
                         <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
                             <div class="accordion-body">
-                            <strong>Home Phone packages options</strong> 
+                                <strong>NO Home Phone</strong> 
+                        
                                 <!-- SPEEDS -->
                                 <ul class="list-group">
                                     <li class="list-group-item">
@@ -212,9 +223,30 @@
                                         Dry Loop   
                                        
                                     </li>
+                                    
+                                    <hr class="hr hr-blurry" />
+
+                                    <div id="provinceBox" class="form-check form-check-inline nodisplay">
+                                        <strong>Select province</strong> 
+                                        <br>
+                                        <div class="form-check form-check-inline">
+                                            <input id="ON" class="form-check-input" type="radio" name="province" value="ON" checked/>
+                                            <label class="form-check-label" for="inlineRadio1">ON</label>
+                                        </div>
+                
+                                        
+                                        <div class="form-check form-check-inline">
+                                            <input id="QC" class="form-check-input" type="radio" name="province" value="QC" />
+                                            <label class="form-check-label" for="inlineRadio1">QC</label>
+                                        </div>
+                                        
+                                    </div>
+                                    
+
+                                    <strong>Home Phone packages options</strong> 
                                     <li class="list-group-item">
                                    
-                                        <input class="form-check-input" type="radio" name="radioHP" id="dryloop" value="" aria-label="..." />
+                                        <input class="form-check-input" type="radio" name="radioHP" id="HPC" value="" aria-label="..." />
                                         Home Phone Choice   
                                        
                                     </li>
