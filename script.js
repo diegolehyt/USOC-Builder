@@ -13,6 +13,10 @@ let InternetIndicator = false;
 let TVIndicator = false;
 let HPIndicator = false;
 
+let HPCIndicator = false;
+let HPLIndicator = false;
+let HPAIndicator = false;
+
 // MODEM
 let HH2K = document.getElementById("HH2K");
 let HH3K = document.getElementById("HH3K");
@@ -36,7 +40,10 @@ let SATTV = document.getElementById("SATTV");
 
 // HP pkg Display
 let dryloop = document.getElementById("dryloop");
+
 let HPC = document.getElementById("HPC");
+let HPL = document.getElementById("HPL");
+let HPA = document.getElementById("HPA");
 
 let provinceBox = document.getElementById("provinceBox");
 
@@ -52,18 +59,7 @@ function WHP(){
 }
 
 
-
-
-
 // functions
-
-// Generate USOC List Function
-function HPpkg() {
-        
-  let USOCelement = document.createElement("li");
-  USOCelement.className = "list-group-item list-group-item-action list-group-item-info"
-
-}
 
 // SUBMIT Btn Function
 submitBtn.addEventListener("click", submit);
@@ -87,6 +83,10 @@ function submit() {
     InternetIndicator = false;
     TVIndicator = false;
     HPIndicator = false;
+
+    HPCIndicator = false;
+    HPLIndicator = false;
+    HPAIndicator = false;
   }
 
   // S C A N S
@@ -209,12 +209,24 @@ function submit() {
   }
 
 
-
   // HP SCAN
 
+  if (HPC.checked == true) {
+    HPIndicator = true; 
+    HPCIndicator = true; 
 
+    USOCS.push("1K115");
+    USOCS.push("BODNA");
+    USOCS.push("NAULP");
+  }
 
+  else if (HPL.checked == true) {
+    HPIndicator = true; 
+    HPLIndicator = true;
 
+    USOCS.push("1K111");
+  
+  }
 
 
   // BUNDLE type
@@ -265,7 +277,74 @@ function submit() {
     USOCS.forEach(generateList);
 
   }
+
+  // INT + HP (DUO)
+  if (InternetIndicator == true && TVIndicator == false && HPIndicator == true){
+
+    bundle.innerHTML = "INTERNET / Home Phone - DUO";
+
+    CS.innerHTML = "CS: 1LRCP"
+    LST.innerHTML = "LST: 1LR"
+
+    // pushing USOCs
+    USOCS.push("1LRCP (Main dry loop w/ HP)");
+
+    // FTTH
+    USOCS.push("FTTHR (Fibre to the Home)");
+    USOCS.push("RGATA (VOIP)");
+    USOCS.push("MQOSR (VOIP)");
+      
+    
+    // Generate List
+    USOCS.forEach(generateList);
+
+  }
+
+  // TV + HP (DUO)
+  if (InternetIndicator == false && TVIndicator == true && HPIndicator == true){
+
+    bundle.innerHTML = "INTERNET / Fibe TV / Home Phone - TRIO";
+
+    CS.innerHTML = "CS: VLR"
+    LST.innerHTML = "LST: 1LRCP"
+
+    // pushing USOCs
+    USOCS.push("1LRCP (Main dry loop w/ HP)");
+    USOCS.push("WDATA (DSL w/ Fibe TV)"); 
+    // FTTH
+    USOCS.push("FTTHR (Fibre to the Home)");
+    USOCS.push("RGATA (VOIP)");
+    USOCS.push("MQOSR (VOIP)");
+      
+    
+    // Generate List
+    USOCS.forEach(generateList);
+
+  }
+
+  // INT + TV + HP (trio)
+  if (InternetIndicator == true && TVIndicator == true && HPIndicator == true){
+
+    bundle.innerHTML = "INTERNET / Fibe TV / Home Phone - TRIO";
+
+    CS.innerHTML = "CS: VLR"
+    LST.innerHTML = "LST: 1LRCP"
+
+    // pushing USOCs
+    USOCS.push("1LRCP (Main dry loop w/ HP)");
+    USOCS.push("WDATA (DSL w/ Fibe TV)"); 
+    // FTTH
+    USOCS.push("FTTHR (Fibre to the Home)");
+    USOCS.push("RGATA (VOIP)");
+    USOCS.push("MQOSR (VOIP)");
+      
+    
+    // Generate List
+    USOCS.forEach(generateList);
+
+  }
 }
+
 
 // APP ends
 
