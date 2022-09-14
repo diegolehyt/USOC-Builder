@@ -241,9 +241,9 @@ function submit() {
     USOCS.push("1M517");
 
     // credits
-    USOCS.push("1A624 (credit $10.49)");
-    USOCS.push("1A775 (credit $10)");
-    USOCS.push("1K563 (credit $46.56)");
+    USOCS.push("1A624 (credit $46.56)");
+    USOCS.push("1A775 (credit)");
+    USOCS.push("1K563 (credit)");
 
 
        
