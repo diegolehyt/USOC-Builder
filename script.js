@@ -215,9 +215,39 @@ function submit() {
     HPIndicator = true; 
     HPCIndicator = true; 
 
-    USOCS.push("1K115");
-    USOCS.push("BODNA");
+   
+
+    // HP Choice USOCs
+    USOCS.push("TTR");
+    USOCS.push("RL911");
+
+    // long distance plan
+    USOCS.push("PM1NO");
     USOCS.push("NAULP");
+
+    USOCS.push("1K115 (HP Choice)");
+    USOCS.push("MSEVM");
+    USOCS.push("MSPGR");
+
+    // features
+    USOCS.push("1M125");
+    USOCS.push("1M133");
+    USOCS.push("1M135");
+    USOCS.push("1M144");
+    USOCS.push("1M146");
+    USOCS.push("1M147");
+    USOCS.push("1M149");
+    USOCS.push("1M153");
+    USOCS.push("1M517");
+
+    // credits
+    USOCS.push("1A624 (credit $10.49)");
+    USOCS.push("1A775 (credit $10)");
+    USOCS.push("1K563 (credit $46.56)");
+
+
+       
+    
   }
 
   else if (HPL.checked == true) {
@@ -310,7 +340,9 @@ function submit() {
 
     // pushing USOCs
     USOCS.push("1LRCP (Main dry loop w/ HP)");
-    USOCS.push("WDATA (DSL w/ Fibe TV)"); 
+    USOCS.push("WDATA (DSL w/ Fibe TV)");
+
+
     // FTTH
     USOCS.push("FTTHR (Fibre to the Home)");
     USOCS.push("RGATA (VOIP)");
